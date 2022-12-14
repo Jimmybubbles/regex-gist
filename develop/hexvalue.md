@@ -54,15 +54,38 @@ this set [a-f0-9]{6} | (or) [a-f0-9]{3} this set
 
 ### Character Classes
 
-Not applicable to regex for hex value
+Not applicable to regex for hex value 
 
 ### Flags
 
+regex will usually come in the form of /abc/, the search pattern is delimited by two slash characters. 
+At the end we can specify a flag with these values 
+
+m (multi-line) when enabled ^ and $ will match the start and end of the line, instead of the whole string.
+
 ### Grouping and Capturing
+
+Grouping is used to help the user know what they are looking for. ([a-f0-9]{6})
+
+- examples of grouping 
+  a(bc) the parentheses create a capturing group with the bc being the value. 
 
 ### Bracket Expressions
 
+values within square brackets represent the range of characters that match an expression. 
+ [a-f0-9]and [a-f0-9] this is the bracketed expression in the example above.
+
+ - examples of bracket expression
+   [abc] matches a string that has either an a or a b or a c this is the same as a|b|c [a-c]
+   same as previous  [a-fA-F0-9] a string that represents a single hexadecimal digit, case insensitively [0-9]% 
+   a string that has a character from 0-9 before a % sign [^a-za-z] a string that doesnt have a letter from a-z or from A-Z
+   in the case above the ^ is used as negation of the expression.
+
 ### Greedy and Lazy Match
+
+{} - greedy operator so they expand the match as far as possible through the provided text. 
+? - to make it lazy
+(The lazy mode of quantifiers is an opposite to the greedy mode. It means: “repeat minimal number of times”.)
 
 ### Boundaries
 
@@ -78,5 +101,4 @@ Not applicable to regex for hex value
 
 ## Author
 
-james russell 
-
+[james russell github](https://github.com/Jimmybubbles)

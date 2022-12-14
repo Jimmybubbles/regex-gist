@@ -101,4 +101,4 @@ Not applicable to regex for hex value
 
 ## Author
 
-james russell - 
+[james russell github](https://github.com/Jimmybubbles)
